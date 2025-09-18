@@ -132,7 +132,7 @@ h2 {
     }
 }
 
-@media (600px <= width <= 800px) {
+@media (600px < width < 800px) {
     body {
         background: #333;
     }
