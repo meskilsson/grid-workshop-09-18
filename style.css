@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px;
+    gap: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.item {
+    border: 3px solid grey;
+    text-align: center;
+    background-color: beige;
+}
+
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    border: 2px solid coral;
+    gap: 20px;
+    justify-content: center;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 50px;
+}
+
+.circle {
+    
+    border: 5px solid indigo;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: peachpuff;
+    align-content: center;
+}
+
+.responsiv-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    border: 4px solid yellow;
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: lightgrey;
+}
+
+.square {
+    border: 2px solid blue;
+    background: lightblue;
+    align-content: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px;
+    gap: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    padding: 6px;
+}
+
+.grid-area {
+    border: 3px solid darkred;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 80px);
+    grid-template-areas:
+    "header header header"
+    "content content aside"
+    "content content aside"
+    "footer footer footer";
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.area {
+    border: 5px solid magenta;
+    padding: 20px;
+}
+
+.area1 {
+    grid-area: header;
+}
+
+.area2 {
+    grid-area: content;
+}
+.area3 {
+    grid-area: footer;
+}
+.area4 {
+    grid-area: aside;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-area {
+        grid-template-areas: 
+        "header header header"
+        "content content content"
+        "aside aside aside"
+        "footer footer footer";
+    }
+}
+
+@media (600px <= width <= 800px) {
+    body {
+        background: #333;
+    }
+} 
